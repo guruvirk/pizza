@@ -213,7 +213,7 @@ header .menu-nav-icon {
         line-height: 60px;
         display: none;
         cursor: pointer;
-        color: #fff;
+        color: #fff !important;
 }
 
 /* DROPDOWN MENU STYLING */
