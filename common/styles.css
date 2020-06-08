@@ -134,7 +134,7 @@ textarea:focus { outline-color: #EF0031; }
 --------------------------------- */
 
 header {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         right: 0;
@@ -154,7 +154,6 @@ header:after {
         right: 0;
         background-color: black;
         background-size: 26px 10px;
-        opacity: .6;
 }
 
 header:before {
@@ -166,7 +165,6 @@ header:before {
         right: 0;
         background: #000;
         z-index: -1;
-        opacity: .6;
 }
 
 header i {
@@ -392,8 +390,8 @@ section {
 
 .heading-img {
         height: auto;
-        width: 40px;
-        margin-bottom: 20px;
+        width: 60px;
+        margin-bottom: 15px;
 }
 
 .story-area {
