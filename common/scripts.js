@@ -10,6 +10,18 @@ function selectedActive(elem) {
         else $(selectionID).addClass("active");
 }
 
+function selectedDailyActive(elem) {
+        var selectedAttr = $(elem),
+                selectionID = "." + $(selectedAttr).data("select");
+
+        $(".dailySelecton a").removeClass("active");
+        $(selectedAttr).addClass("active");
+        $(".daily-menu").removeClass("active");
+
+        if (selectionID == ".*") $(".daily-menu").addClass("active");
+        else $(selectionID).addClass("active");
+}
+
 
 function enableCounterUp(a) {
         var counterElement;
@@ -25,7 +37,7 @@ function enableCounterUp(a) {
                         var $this = $(this),
                                 countDuration = $this.data('duration'),
                                 countTo = $this.attr('data-count');
-                        $({countNum: $this.text()}).animate({countNum: countTo}, {
+                        $({ countNum: $this.text() }).animate({ countNum: countTo }, {
                                 duration: countDuration,
                                 easing: 'swing',
                                 step: function () {
@@ -41,10 +53,10 @@ function enableCounterUp(a) {
         return a;
 }
 
-function panelAccordian(){
+function panelAccordian() {
 
         var panelTitle = $('.panel-title');
-        panelTitle.on('click', function(){
+        panelTitle.on('click', function () {
                 $(this).toggleClass('active');
                 return false;
         });
@@ -52,8 +64,8 @@ function panelAccordian(){
 }
 
 
-function enableRadialProgress(){
-        $(".radial-progress").each(function(){
+function enableRadialProgress() {
+        $(".radial-progress").each(function () {
                 var $this = $(this),
                         progPercent = $this.data('prog-percent');
 
@@ -67,7 +79,7 @@ function enableRadialProgress(){
                         from: { color: '#fff', width: 1 },
                         to: { color: '#EF002E', width: 3 },
                         // Set default step function for all animate calls
-                        step: function(state, circle) {
+                        step: function (state, circle) {
                                 circle.path.setAttribute('stroke', state.color);
                                 circle.path.setAttribute('stroke-width', state.width);
 
@@ -76,7 +88,7 @@ function enableRadialProgress(){
                         }
                 });
 
-                $(this).waypoint(function(){ bar.animate(progPercent); },{offset: "90%"})
+                $(this).waypoint(function () { bar.animate(progPercent); }, { offset: "90%" })
         });
 }
 
@@ -93,6 +105,8 @@ function enableRadialProgress(){
 
         enableSwiper();
 
+        $(`#${new Date().getDay()}day`).addClass("active")
+
         /*COUNTER*/
         var countLineProgress = 0;
         var countCounterUp = 0;
@@ -104,12 +118,21 @@ function enableRadialProgress(){
         });
 
         /*CUSTOME ISOTOPE*/
-        var selectedAttr = $('[data-select].active');
+        var selectedAttr = $('.selecton [data-select].active');
         selectedActive(selectedAttr);
 
-        $('[data-select]').on("click", function () {
+        $('.selecton [data-select]').on("click", function () {
                 var selectedAttr = $(this);
                 selectedActive(selectedAttr);
+                return false;
+        });
+
+        var selectedDailyAttr = $('.dailySelecton [data-select].active');
+        selectedDailyActive(selectedDailyAttr);
+
+        $('.dailySelecton [data-select]').on("click", function () {
+                var selectedDailyAttr = $(this);
+                selectedDailyActive(selectedDailyAttr);
                 return false;
         });
 
@@ -210,12 +233,12 @@ function enableSwiper() {
                                 speed: (swiperSpeed ? swiperSpeed : 1000),
                                 autoHeight: ((swiperAutoHeight == false) ? swiperAutoHeight : true),
                                 effect: (swiperSlideEffect ? swiperSlideEffect : 'coverflow'),
-                                fade: {crossFade: swiperCrossFade ? swiperCrossFade : false},
+                                fade: { crossFade: swiperCrossFade ? swiperCrossFade : false },
                                 breakpoints: {
-                                        1200: {slidesPerView: swprResponsive[3] ? swprResponsive[3] : 1,},
-                                        992: {slidesPerView: swprResponsive[2] ? swprResponsive[2] : 1,},
-                                        768: {slidesPerView: swprResponsive[1] ? swprResponsive[1] : 1,},
-                                        576: {slidesPerView: swprResponsive[0] ? swprResponsive[0] : 1,}
+                                        1200: { slidesPerView: swprResponsive[3] ? swprResponsive[3] : 1, },
+                                        992: { slidesPerView: swprResponsive[2] ? swprResponsive[2] : 1, },
+                                        768: { slidesPerView: swprResponsive[1] ? swprResponsive[1] : 1, },
+                                        576: { slidesPerView: swprResponsive[0] ? swprResponsive[0] : 1, }
 
                                 },
                         });
@@ -245,7 +268,7 @@ function initMap() {
         // Create a map object, and include the MapTypeId to add
         // to the map type control.
 
-        var uluru = {lat: 56.946285, lng: 24.105078};
+        var uluru = { lat: 56.946285, lng: 24.105078 };
         var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 4,
                 center: uluru

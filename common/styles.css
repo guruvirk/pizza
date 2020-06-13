@@ -140,7 +140,7 @@ header {
         right: 0;
         text-align: center;
         z-index: 1000;
-        padding: 25px 0;
+        /* padding: 25px 0; */
         font-weight: 600;
         color: #fff;
 }
@@ -281,7 +281,7 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu {
         }
 
         header .logo {
-                height: 60px;
+                height: 20px;
         }
 
         header ul.main-menu > li > a {
@@ -744,7 +744,7 @@ section {
 
 /* BACKGROUND COLOR*/
 
-.bg-seller{ background: url(../images/sellers-1-1600x1600.jpg)  no-repeat; background-size: cover; position: relative; z-index: 1; }
+.bg-seller{ background: url(../images/image20.jpeg)  no-repeat; background-size: cover; position: relative; z-index: 1; }
 
 .bg-seller:after{ content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1; background: rgba(0,0,0,.85); }
 
@@ -800,6 +800,20 @@ section {
 
 .ïmg-200x{ height: 200px; width: 200px; }
 
+.ïmg-100x{ height: 100px; width: 100px; }
+
+.ïmg-150x{ height: 150px; width: 150px; }
+
+.basketImg {
+        height: 100px;
+}
+
+.basketDesc {
+        margin-left: auto;
+        width: 70%;
+        margin-right: auto;
+}
+
 
 /*RIBBONS*/
 
@@ -843,9 +857,9 @@ section {
 }
 
 
-.bg-1 { background: url(../images/slider_1_1920_1200.jpg) no-repeat center; background-size: cover; }
+.bg-1 { background: url(../images/image16.jpeg) no-repeat center; background-size: cover; }
 
-.bg-2 {   background: url(../images/story_bg_1.png) no-repeat center; background-size: 100%; }
+.bg-2 {   background: url(../images/image17.jpeg) no-repeat center; background-size: 100%; }
 
 .bg-3 {  background: url(../images/story_bg_2.png) no-repeat center;  background-size: 100%; }
 
@@ -862,7 +876,7 @@ section {
 .bg-grad-layer-6:after { content: ''; position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: -1; opacity: .6;
         background: linear-gradient(to top, #000 0%, rgba(0, 0, 0, .4) 100%); }
 
-.bg-layer-4:after { content: ''; position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: -1; opacity: .50; background: #111; }
+.bg-layer-4 { padding: 20px; opacity: .9; background: #111; }
 
 .bg-layer-6:after { content: ''; position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: -1; opacity: .60; background: #111; }
 
@@ -1257,8 +1271,18 @@ ul.selecton li > a{ padding: 15px 30px;   }
 ul.selecton li:hover a,
 ul.selecton li a.active{ border-radius: 3px 3px 0 0; background: #EF0031; color: #FFFFFF;  }
 
+ul.dailySelecton{ text-align: center;  font-size: 1.2em;  }
+
+ul.dailySelecton li > a{ padding: 15px 30px;   }
+
+ul.dailySelecton li:hover a,
+ul.dailySelecton li a.active{ border-radius: 3px 3px 0 0; background: #EF0031; color: #FFFFFF;  }
+
 .food-menu{ display: none;  }
 .food-menu.active{ opacity: 0; display: block!important; animation: full-opacity-anim .3s forwards ; }
+
+.daily-menu{ display: none;  }
+.daily-menu.active{ opacity: 0; display: block!important; animation: full-opacity-anim .3s forwards ; }
 
 @keyframes full-opacity-anim{
         100%{ opacity: 1; }
@@ -1443,9 +1467,17 @@ ul.selecton li a.active{ border-radius: 3px 3px 0 0; background: #EF0031; color:
         cursor: all-scroll;
 }
 
+section{
+        padding-top: 109px;
+}
+
 /* RESPONSIVE */
 
 @media only screen and (max-width: 767px) {
+
+        section{
+                padding-top: 30px;
+        }
 
         .swiper-scrollbar.resp {
                 overflow: hidden;
@@ -1475,7 +1507,7 @@ ul.selecton li a.active{ border-radius: 3px 3px 0 0; background: #EF0031; color:
 
 /*FOOTER*/
 
-footer{ background: url("../images/footer_1600x800.jpg") no-repeat; background-size: cover;  position: relative;  text-align: center;z-index: 1;  font-size: 1.3em; }
+footer{ background: url("../images/image9.jpeg") no-repeat; background-size: cover;  position: relative;  text-align: center;z-index: 1;  font-size: 1.3em; }
 
 .footer-bg-1{ background-image:  url("../images/footer-1.png") ; }
 .footer-bg-1:after{ display: none; }
