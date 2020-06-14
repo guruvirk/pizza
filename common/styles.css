@@ -335,7 +335,7 @@ header .main-menu li.drop-down a.mouseover + ul.drop-down-menu {
 
 @media only screen and (max-width: 575px) {
 
-        header { padding: 15px 0 25px; }
+        header { padding: 15px 0 5px; }
 
         header .right-area { width: 100%; float: none; clear: both; border-top: 1px solid rgba(255, 255, 255, .2); border-left: 0; }
 
@@ -419,7 +419,7 @@ section {
 
         .story-bg { width: 200px;  }
 
-        section { padding: 70px 0 40px;  }
+        section { padding: 120px 0 40px;  }
 
         .heading { margin-bottom: 60px;  }
 }
@@ -427,7 +427,7 @@ section {
 
         .story-bg { width: 200px;  }
 
-        section { padding: 60px 0 30px;  }
+        section { padding: 100px 0 30px;  }
 
         .heading { margin-bottom: 50px;  }
 }
@@ -1488,10 +1488,6 @@ section{
 /* RESPONSIVE */
 
 @media only screen and (max-width: 767px) {
-
-        section{
-                padding-top: 30px;
-        }
 
         .swiper-scrollbar.resp {
                 overflow: hidden;
