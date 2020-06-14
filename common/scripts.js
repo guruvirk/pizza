@@ -22,6 +22,18 @@ function selectedDailyActive(elem) {
         else $(selectionID).addClass("active");
 }
 
+function selectedPizzaActive(elem) {
+        var selectedAttr = $(elem),
+                selectionID = "." + $(selectedAttr).data("select");
+
+        $(".pizzaSelecton a").removeClass("active");
+        $(selectedAttr).addClass("active");
+        $(".pizza-menu").removeClass("active");
+
+        if (selectionID == ".*") $(".pizza-menu").addClass("active");
+        else $(selectionID).addClass("active");
+}
+
 
 function enableCounterUp(a) {
         var counterElement;
@@ -133,6 +145,15 @@ function enableRadialProgress() {
         $('.dailySelecton [data-select]').on("click", function () {
                 var selectedDailyAttr = $(this);
                 selectedDailyActive(selectedDailyAttr);
+                return false;
+        });
+
+        var selectedPizzaAttr = $('.pizzaSelecton [data-select].active');
+        selectedPizzaActive(selectedPizzaAttr);
+
+        $('.pizzaSelecton [data-select]').on("click", function () {
+                var selectedPizzaAttr = $(this);
+                selectedPizzaActive(selectedPizzaAttr);
                 return false;
         });
 
