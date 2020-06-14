@@ -1278,14 +1278,18 @@ ul.dailySelecton li > a{ padding: 15px 30px;   }
 ul.dailySelecton li:hover a,
 ul.dailySelecton li a.active{ border-radius: 3px 3px 0 0; background: #EF0031; color: #FFFFFF;  }
 
-ul.pizzaSelecton{ text-align: center;  font-size: 1.2em;  }
+ul.pizzaSelecton{ text-align: center;  font-size: 0.9em;  }
 
-ul.pizzaSelecton li > a{ padding: 15px 30px;   }
+ul.pizzaSelecton li > a{ padding: 10px 20px;   }
 
 ul.pizzaSelecton li:hover a,
 ul.pizzaSelecton li a.active{ border-radius: 3px 3px 0 0; background: #EF0031; color: #FFFFFF;  }
 
-.food-menu{ display: none;  }
+.food-menu{ display: none;
+        padding-left: 10px;
+        padding-right: 10px;  
+}
+
 .food-menu.active{ opacity: 0; display: block!important; animation: full-opacity-anim .3s forwards ; }
 
 .daily-menu{ display: none;  }
