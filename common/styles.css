@@ -1489,6 +1489,10 @@ section{
 
 @media only screen and (max-width: 767px) {
 
+        section{
+                padding-top: 130px;
+        }
+
         .swiper-scrollbar.resp {
                 overflow: hidden;
                 left: 15px;
