@@ -394,6 +394,12 @@ section {
         margin-bottom: 15px;
 }
 
+.title-img {
+        height: auto;
+        width: 150px;
+        margin-bottom: 15px;
+}
+
 .story-area {
         position: relative;
         background: black;
