@@ -39,8 +39,7 @@ function enableCounterUp(a) {
         var counterElement;
         if (isExists('#counter')) {
                 counterElement = $('#counter');
-        }
-        else {
+        } else {
                 return;
         }
         var oTop = $('#counter').offset().top - window.innerHeight;
@@ -49,7 +48,11 @@ function enableCounterUp(a) {
                         var $this = $(this),
                                 countDuration = $this.data('duration'),
                                 countTo = $this.attr('data-count');
-                        $({ countNum: $this.text() }).animate({ countNum: countTo }, {
+                        $({
+                                countNum: $this.text()
+                        }).animate({
+                                countNum: countTo
+                        }, {
                                 duration: countDuration,
                                 easing: 'swing',
                                 step: function () {
@@ -88,19 +91,33 @@ function enableRadialProgress() {
                         easing: 'easeInOut',
                         duration: 1400,
                         text: {},
-                        from: { color: '#fff', width: 1 },
-                        to: { color: '#EF002E', width: 3 },
+                        from: {
+                                color: '#fff',
+                                width: 1
+                        },
+                        to: {
+                                color: '#EF002E',
+                                width: 3
+                        },
                         // Set default step function for all animate calls
                         step: function (state, circle) {
                                 circle.path.setAttribute('stroke', state.color);
                                 circle.path.setAttribute('stroke-width', state.width);
 
                                 var value = Math.round(circle.value() * 100);
-                                if (value === 0) { circle.setText(''); } else { circle.setText(value); }
+                                if (value === 0) {
+                                        circle.setText('');
+                                } else {
+                                        circle.setText(value);
+                                }
                         }
                 });
 
-                $(this).waypoint(function () { bar.animate(progPercent); }, { offset: "90%" })
+                $(this).waypoint(function () {
+                        bar.animate(progPercent);
+                }, {
+                        offset: "90%"
+                })
         });
 }
 
@@ -178,26 +195,6 @@ function enableRadialProgress() {
 
         });
 
-        var slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("dot");
-                for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";
-                }
-                slideIndex++;
-                if (slideIndex > slides.length) { slideIndex = 1 }
-                for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" activeTab", "");
-                }
-                slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].className += " activeTab";
-                setTimeout(showSlides, 3000); // Change image every 2 seconds
-        }
-
 })(jQuery);
 
 
@@ -225,8 +222,7 @@ function dropdownMenu(winWidth) {
                         if ($(this).attr('href') == '#') return false;
                         if ($(this).hasClass('mouseover')) {
                                 $(this).removeClass('mouseover');
-                        }
-                        else {
+                        } else {
                                 $(this).addClass('mouseover');
                         }
                         return false;
@@ -273,12 +269,22 @@ function enableSwiper() {
                                 speed: (swiperSpeed ? swiperSpeed : 1000),
                                 autoHeight: ((swiperAutoHeight == false) ? swiperAutoHeight : true),
                                 effect: (swiperSlideEffect ? swiperSlideEffect : 'coverflow'),
-                                fade: { crossFade: swiperCrossFade ? swiperCrossFade : false },
+                                fade: {
+                                        crossFade: swiperCrossFade ? swiperCrossFade : false
+                                },
                                 breakpoints: {
-                                        1200: { slidesPerView: swprResponsive[3] ? swprResponsive[3] : 1, },
-                                        992: { slidesPerView: swprResponsive[2] ? swprResponsive[2] : 1, },
-                                        768: { slidesPerView: swprResponsive[1] ? swprResponsive[1] : 1, },
-                                        576: { slidesPerView: swprResponsive[0] ? swprResponsive[0] : 1, }
+                                        1200: {
+                                                slidesPerView: swprResponsive[3] ? swprResponsive[3] : 1,
+                                        },
+                                        992: {
+                                                slidesPerView: swprResponsive[2] ? swprResponsive[2] : 1,
+                                        },
+                                        768: {
+                                                slidesPerView: swprResponsive[1] ? swprResponsive[1] : 1,
+                                        },
+                                        576: {
+                                                slidesPerView: swprResponsive[0] ? swprResponsive[0] : 1,
+                                        }
 
                                 },
                         });
@@ -308,7 +314,10 @@ function initMap() {
         // Create a map object, and include the MapTypeId to add
         // to the map type control.
 
-        var uluru = { lat: 56.946285, lng: 24.105078 };
+        var uluru = {
+                lat: 56.946285,
+                lng: 24.105078
+        };
         var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 4,
                 center: uluru
