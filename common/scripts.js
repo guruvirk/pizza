@@ -195,8 +195,85 @@ function enableRadialProgress() {
 
         });
 
+        var reviews = [{
+                        name: "Baz Slater",
+                        des: "Local Guide",
+                        stars: 4
+                }, {
+                        name: "Hermes Perez",
+                        des: "Local Guide",
+                        stars: 4
+                }, {
+                        name: "Hanxing Xu",
+                        des: "Local Guide",
+                        stars: 5
+                }, {
+                        name: "Damon Smith",
+                        des: "Local Guide",
+                        stars: 4
+                }, {
+                        name: "Albert Nisbet",
+                        des: "Local Guide",
+                        stars: 4
+                }, {
+                        name: "Colin Teasdale",
+                        stars: 4
+                },
+                {
+                        name: "Nils Wimmer",
+                        stars: 5
+                }
+        ]
+
+        for (const item of reviews) {
+                let string = `<div class="reviewContainer"><p style="overflow:hidden;"><span>${item.name || ""}</span>${item.des || ""}</p>${getStars(item.stars || 5)}</div>`
+                $("#scrollReview").append(string)
+        }
+
 })(jQuery);
 
+
+function getStars(starts) {
+        let elem = ""
+        switch (starts) {
+                case 1:
+                        elem = `<span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>`
+                        break;
+                case 2:
+                        elem = elem = `<span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>`
+                        break;
+                case 3:
+                        elem = elem = `<span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>`
+                        break;
+                case 4:
+                        elem = elem = `<span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>`
+                        break;
+                case 5:
+                        elem = elem = `<span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>`
+                        break;
+        }
+        return elem
+}
 
 function dropdownMenu(winWidth) {
 
