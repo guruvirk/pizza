@@ -829,7 +829,7 @@
                                 </div> -->
                                 <div class="col-md-6 food-menu deals">
                                         <div class="sided-90x mb-30 ">
-                                                <h5 style="text-align: center;" class="mb-10"><b>DEAL 1</b></h5>
+                                                <h5 style="text-align: center;" class="mb-10"><b>DEAL</b></h5>
                                                 <p style="text-align: center;"> 2 X Standard & Chicken Pizza (Choose
                                                         from $13.90 each) </p>
                                                 <h5 style="text-align: center;">+</h5>
@@ -842,7 +842,7 @@
                                 </div>
                                 <div class="col-md-6 food-menu deals">
                                         <div class="sided-90x mb-30 ">
-                                                <h5 style="text-align: center;" class="mb-10"><b>DEAL 2</b></h5>
+                                                <h5 style="text-align: center;" class="mb-10"><b>DEAL</b></h5>
                                                 <p style="text-align: center;"> 3 X Value Range Pizza (Choose From
                                                         $9.90 each) </p>
                                                 <h5 style="text-align: center;">+</h5>
@@ -856,7 +856,7 @@
                                 </div>
                                 <div class="col-md-6 food-menu deals">
                                         <div class="sided-90x mb-30 ">
-                                                <h5 style="text-align: center;" class="mb-10"><b>DEAL 3</b></h5>
+                                                <h5 style="text-align: center;" class="mb-10"><b>DEAL</b></h5>
                                                 <p style="text-align: center;"> 3 X STANDARD OR CHICKEN Pizza (Choose
                                                         From $13.90 each) </p>
                                                 <h5 style="text-align: center;">+</h5>
@@ -973,8 +973,8 @@
                                                 <div style="margin-bottom: 20px;" class="heading">
                                                         <h3 style="font-family: 'Open Sans'">Seafood Basket</h3>
                                                 </div>
-                                                <div class="basketImg mlr-auto pos-relative"><img style="width: auto;"
-                                                                src="images/seafood.jpeg" alt=""></div>
+                                                <div class="basketImg mlr-auto pos-relative"><img style="width: auto;height: 100%;"
+                                                                src="images/sea-food-basket.jpg" alt=""></div>
                                                 <h6 class="mt-20 basketDesc">Scallop's, Prawn twisters, Fish bites,
                                                         Squid ring's, Chips, Mussel's and Seashore Bread</h6>
                                                 <h4 class="mt-5 color-primary"><b>$20</b></h4>
@@ -987,8 +987,8 @@
                                                 <div style="margin-bottom: 20px;" class="heading">
                                                         <h3 style="font-family: 'Open Sans'">Chicken Basket</h3>
                                                 </div>
-                                                <div class="basketImg mlr-auto pos-relative"><img style="width: auto;"
-                                                                src="images/chicken.jpeg" alt=""></div>
+                                                <div class="basketImg mlr-auto pos-relative"><img style="width: auto;height: 100%;"
+                                                                src="images/food-basket.jpg" alt=""></div>
                                                 <h6 class="mt-20 basketDesc">Six pieces of chicken potato and gravy,
                                                         Coleslaw, Rooster Bread, Sweet chillie and Aioli sauce</h6>
                                                 <h4 class="mt-5 color-primary"><b>$20</b></h4>
@@ -1063,7 +1063,7 @@
                         <div class="row">
                                 <div style="width: 100%;" class="daily-menu fri">
                                         <div class="sided-90x mb-30">
-                                                <h5 class="mb-10 center-text"><b> Garlic Prown Pizza + Any Can of
+                                                <h5 class="mb-10 center-text"><b> Garlic Prawn Pizza + Any Can of
                                                                 Drink</b>
                                                 </h5>
                                                 <!--s-right-->
@@ -1104,34 +1104,66 @@
         </section>
 
         <footer class="pb-50  pt-70 pos-relative">
-                <div class="container-fluid">
-                        <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
-
-                        <div class="pt-30">
-                                <p class="underline-secondary"><b>Address:</b></p>
-                                <p>22 Ngawaka Place Turangi </p>
+                <div class="container-fluid row" style="margin-left: 0px;margin-right: 0px;">
+                        <a style="width: 100%; margin-bottom: 20px;margin: auto;" href="index.html"><img
+                                        style="width: 50%;" src="images/logo.png" alt="Logo"></a>
+                        <div style="margin-top: 30px;" class="container-fluid col-md-6 col-sm-12 col-lg-6">
+                                <form class="form-style-1 placeholder-1">
+                                        <div class="row" style="margin-left: 0px;margin-right: 0px;">
+                                                <h4 class="mb-20" style="margin: auto;">Write your feedback</h4>
+                                                <div style="margin: auto;" class="col-md-6"> <input class="mb-20"
+                                                                id="nameInput" type="text" placeholder="Name"> </div>
+                                                <div style="margin: auto;" class="col-md-12">
+                                                        <textarea id="commentInput" class="h-100x ptb-20"
+                                                                placeholder="Comment"></textarea></div>
+                                                <div class="rating">
+                                                        <span class="fa fa-star fa-3x"><input type="radio"
+                                                                        id="str5" value="5"></span>
+                                                        <span class="fa fa-star fa-3x"><input type="radio"
+                                                                        id="str4" value="4"></span>
+                                                        <span class="fa fa-star fa-3x"><input type="radio"
+                                                                        id="str3" value="3"></span>
+                                                        <span class="fa fa-star fa-3x"><input type="radio"
+                                                                        id="str2" value="2"></span>
+                                                        <span class="fa fa-star fa-3x"><input type="radio"
+                                                                        id="str1" value="1"></span>
+                                                </div>
+                                                <input id="starsValue" class="mb-20" type="text"
+                                                        style="visibility: hidden;">
+                                        </div><!-- row -->
+                                        <h6 class="center-text mtb-30"><input style="width: 50%;
+                                                margin: auto;
+                                                color: white;
+                                                background: #EF0031;" type="submit" value="SUBMIT"></h6>
+                                </form>
                         </div>
+                        <div style="margin-top: 30px;" class="col-md-6 col-sm-12 col-lg-6">
+                                <div>
+                                        <p class="underline-secondary"><b>Address:</b></p>
+                                        <p>22 Ngawaka Place Turangi </p>
+                                </div>
 
-                        <div class="pt-30">
-                                <p class="underline-secondary mb-10"><b>Phone:</b></p>
-                                <a href="tel:+53 345 7953 32453 ">079749333 </a>
-                        </div>
+                                <div class="pt-30">
+                                        <p class="underline-secondary mb-10"><b>Phone:</b></p>
+                                        <a href="tel:+53 345 7953 32453 ">079749333 </a>
+                                </div>
 
-                        <div class="pt-30">
-                                <p class="underline-secondary mb-10"><b>Email:</b></p>
-                                <a href="mailto:yourmail@gmail.com"> yourmail@gmail.com</a>
-                        </div>
+                                <div class="pt-30">
+                                        <p class="underline-secondary mb-10"><b>Email:</b></p>
+                                        <a href="mailto:yourmail@gmail.com"> yourmail@gmail.com</a>
+                                </div>
 
-                        <ul class="icon mt-30">
-                                <li><a href="#"><i class="ion-social-pinterest"></i></a></li>
-                                <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-                                <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-                                <li><a href="#"><i class="ion-social-dribbble-outline"></i></a></li>
-                                <li><a href="#"><i class="ion-social-linkedin"></i></a></li>
-                                <li><a href="#"><i class="ion-social-vimeo"></i></a></li>
-                        </ul>
+                                <ul class="icon mt-30">
+                                        <li><a href="#"><i class="ion-social-pinterest"></i></a></li>
+                                        <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                                        <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                                        <li><a href="#"><i class="ion-social-dribbble-outline"></i></a></li>
+                                        <li><a href="#"><i class="ion-social-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="ion-social-vimeo"></i></a></li>
+                                </ul>
 
-                </div><!-- container -->
+                        </div><!-- container -->
+                </div>
         </footer>
 
         <!-- SCIPTS -->
@@ -1139,6 +1171,7 @@
         <script src="plugin-frameworks/bootstrap.min.js"></script>
         <script src="plugin-frameworks/swiper.js"></script>
         <script src="common/scripts.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 </body>
 

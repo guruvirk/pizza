@@ -195,40 +195,82 @@ function enableRadialProgress() {
 
         });
 
-        var reviews = [{
-                        name: "Baz Slater",
-                        des: "Local Guide",
-                        stars: 4
-                }, {
-                        name: "Hermes Perez",
-                        des: "Local Guide",
-                        stars: 4
-                }, {
-                        name: "Hanxing Xu",
-                        des: "Local Guide",
-                        stars: 5
-                }, {
-                        name: "Damon Smith",
-                        des: "Local Guide",
-                        stars: 4
-                }, {
-                        name: "Albert Nisbet",
-                        des: "Local Guide",
-                        stars: 4
-                }, {
-                        name: "Colin Teasdale",
-                        stars: 4
-                },
-                {
-                        name: "Nils Wimmer",
-                        stars: 5
+        $.get("http://playludo.live/pizza/reviews", function (data) {
+                for (const item of data.items) {
+                        let string = `<div class="reviewContainer">
+                <p style="overflow: hidden;text-overflow: ellipsis;"><span class="name">${item.name || ""}</span>${item.title || ""}</p>
+                ${item.comment? '<p class="des">'+item.comment+'</p>'+getStars(item.stars || 5): '<p class="emptyDes"></p>'+getStars(item.stars || 5)}</div>`
+                        $("#scrollReview").append(string)
                 }
-        ]
+        });
 
-        for (const item of reviews) {
-                let string = `<div class="reviewContainer"><p style="overflow:hidden;"><span>${item.name || ""}</span>${item.des || ""}</p>${getStars(item.stars || 5)}</div>`
-                $("#scrollReview").append(string)
-        }
+        $(".rating input:radio").attr("checked", false);
+
+        $('.rating input').click(function () {
+                $(".rating span").removeClass('checked');
+                switch (this.id) {
+                        case 'str1':
+                                $('#str1').parent().addClass('checked');
+                                break;
+                        case 'str2':
+                                $('#str1').parent().addClass('checked');
+                                $('#str2').parent().addClass('checked');
+                                break;
+                        case 'str3':
+                                $('#str1').parent().addClass('checked');
+                                $('#str2').parent().addClass('checked');
+                                $('#str3').parent().addClass('checked');
+                                break;
+                        case 'str4':
+                                $('#str1').parent().addClass('checked');
+                                $('#str2').parent().addClass('checked');
+                                $('#str3').parent().addClass('checked');
+                                $('#str4').parent().addClass('checked');
+                                break;
+                        case 'str5':
+                                $('#str1').parent().addClass('checked');
+                                $('#str2').parent().addClass('checked');
+                                $('#str3').parent().addClass('checked');
+                                $('#str4').parent().addClass('checked');
+                                $('#str5').parent().addClass('checked');
+                                break;
+                }
+        });
+
+        $('input:radio').change(
+                function () {
+                        $('#starsValue').val(this.value)
+                });
+
+        $("form").submit(function (e) {
+                e.preventDefault();
+                let name = $('#nameInput').val()
+                let comment = $('#commentInput').val()
+                let stars = $('#starsValue').val()
+                if (!name) {
+                        alert("Name is Required")
+                        return
+                }
+                if (!comment) {
+                        alert("Comment is Required")
+                        return
+                }
+                if (!stars) {
+                        alert("Stars are Required")
+                        return
+                }
+                $.post("http://playludo.live/pizza/reviews", {
+                        name: name,
+                        comment: comment,
+                        stars: stars
+                }, function (data) {
+                        alert(`Feedback Submitted`);
+                        $(".rating span").removeClass('checked');
+                        $('#nameInput').val(null)
+                        $('#commentInput').val(null)
+                        $('#starsValue').val(null)
+                });
+        });
 
 })(jQuery);
 
