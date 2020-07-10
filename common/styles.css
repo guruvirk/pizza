@@ -8834,6 +8834,7 @@ div.scrollReviews div {
 }
 
 .rating span {
+        margin: 3px;
         float: right;
         position: relative;
 }
