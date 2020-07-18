@@ -195,7 +195,7 @@ function enableRadialProgress() {
 
         });
 
-        $.get("http://playludo.live/pizza/reviews", function (data) {
+        $.get("https://playludo.live/pizza/reviews", function (data) {
                 for (const item of data.items) {
                         let string = `<div class="reviewContainer">
                 <p style="overflow: hidden;text-overflow: ellipsis;"><span class="name">${item.name || ""}</span>${item.title || ""}</p>
@@ -259,7 +259,7 @@ function enableRadialProgress() {
                         alert("Stars are Required")
                         return
                 }
-                $.post("http://playludo.live/pizza/reviews", {
+                $.post("https://playludo.live/pizza/reviews", {
                         name: name,
                         comment: comment,
                         stars: stars
