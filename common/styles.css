@@ -454,6 +454,8 @@ header .main-menu li.drop-down a.mouseover+ul.drop-down-menu {
 
         header .right-area {
                 color: #fff;
+                height: auto;
+                padding: 0;
         }
 
         /* MAIN MENU */
@@ -536,10 +538,12 @@ header .main-menu li.drop-down a.mouseover+ul.drop-down-menu {
 
         header .right-area {
                 width: 100%;
+                height: auto;
                 float: none;
                 clear: both;
                 border-top: 1px solid rgba(255, 255, 255, .2);
                 border-left: 0;
+                padding: 0;
         }
 
         header ul.main-menu>li>a {
@@ -559,10 +563,6 @@ header .main-menu li.drop-down a.mouseover+ul.drop-down-menu {
                 padding: 0 20px;
         }
 
-        header .right-area {
-                padding-top: 15px;
-        }
-
         header .main-menu {
                 top: 90px;
         }
@@ -579,6 +579,8 @@ header .main-menu li.drop-down a.mouseover+ul.drop-down-menu {
         }
 
         header .info .right-area {
+                padding: 0;
+                height: auto;
                 margin-left: 35px;
         }
 }
@@ -2753,7 +2755,7 @@ section {
 @media only screen and (max-width: 767px) {
 
         section {
-                padding-top: 130px;
+                padding-top: 100px;
         }
 
         .swiper-scrollbar.resp {
@@ -8844,4 +8846,10 @@ div.scrollReviews div {
         top: 0px;
         left: 0px;
         opacity: 0;
+}
+
+.menuImage {
+        width: 50%;
+        margin: auto;
+        margin-bottom: 10px;
 }
